@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "author": "robot-laser",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "board-esp32-devkit-c-v4", "id": "esp", "top": 0, "left": 0, "attrs": {} },
+    { "type": "wokwi-servo", "id": "s0", "top": -180, "left": -60, "attrs": {} },
+    { "type": "wokwi-servo", "id": "s1", "top": -180, "left": 80, "attrs": {} },
+    { "type": "wokwi-servo", "id": "s2", "top": -180, "left": 220, "attrs": {} },
+    { "type": "wokwi-servo", "id": "s3", "top": -180, "left": 360, "attrs": {} },
+    { "type": "wokwi-servo", "id": "s4", "top": -300, "left": -60, "attrs": {} },
+    { "type": "wokwi-servo", "id": "s5", "top": -300, "left": 80, "attrs": {} },
+    { "type": "wokwi-servo", "id": "s6", "top": -300, "left": 220, "attrs": {} },
+    { "type": "wokwi-servo", "id": "s7", "top": -300, "left": 360, "attrs": {} }
+  ],
+  "connections": [
+    ["esp:13", "s0:PWM", "green", []], ["esp:5V", "s0:V+", "red", []], ["esp:GND.1", "s0:GND", "black", []],
+    ["esp:14", "s1:PWM", "green", []], ["esp:5V", "s1:V+", "red", []], ["esp:GND.1", "s1:GND", "black", []],
+    ["esp:16", "s2:PWM", "green", []], ["esp:5V", "s2:V+", "red", []], ["esp:GND.1", "s2:GND", "black", []],
+    ["esp:17", "s3:PWM", "green", []], ["esp:5V", "s3:V+", "red", []], ["esp:GND.1", "s3:GND", "black", []],
+    ["esp:18", "s4:PWM", "green", []], ["esp:5V", "s4:V+", "red", []], ["esp:GND.1", "s4:GND", "black", []],
+    ["esp:19", "s5:PWM", "green", []], ["esp:5V", "s5:V+", "red", []], ["esp:GND.1", "s5:GND", "black", []],
+    ["esp:23", "s6:PWM", "green", []], ["esp:5V", "s6:V+", "red", []], ["esp:GND.1", "s6:GND", "black", []],
+    ["esp:25", "s7:PWM", "green", []], ["esp:5V", "s7:V+", "red", []], ["esp:GND.1", "s7:GND", "black", []]
+  ],
+  "dependencies": {}
+}
