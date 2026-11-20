@@ -3,6 +3,12 @@
 
 const int PINS[8] = {13, 14, 16, 17, 18, 19, 23, 25};
 Servo servos[8];
+const int LIGHT_PINS[8] = {4, 5, 21, 22, 26, 27, 32, 33};
+
+void setLights(bool on) {
+  for (int i = 0; i < 8; i++) digitalWrite(LIGHT_PINS[i], on ? HIGH : LOW);
+  Serial.printf("Luces: %s\n", on ? "ON" : "OFF");
+}
 
 // score: 1.0 = orden, 0.0 = caos
 void applyScore(float harmony) {
@@ -22,7 +28,9 @@ void setup() {
     servos[i].setPeriodHertz(50);
     servos[i].attach(PINS[i], 500, 2400);
     servos[i].write(90);
+    pinMode(LIGHT_PINS[i], OUTPUT);
   }
+  setLights(true);
 }
 
 void loop() {

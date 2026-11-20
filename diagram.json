@@ -3,25 +3,538 @@
   "author": "robot-laser",
   "editor": "wokwi",
   "parts": [
-    { "type": "board-esp32-devkit-c-v4", "id": "esp", "top": 0, "left": 0, "attrs": {} },
-    { "type": "wokwi-servo", "id": "s0", "top": -180, "left": -60, "attrs": {} },
-    { "type": "wokwi-servo", "id": "s1", "top": -180, "left": 80, "attrs": {} },
-    { "type": "wokwi-servo", "id": "s2", "top": -180, "left": 220, "attrs": {} },
-    { "type": "wokwi-servo", "id": "s3", "top": -180, "left": 360, "attrs": {} },
-    { "type": "wokwi-servo", "id": "s4", "top": -300, "left": -60, "attrs": {} },
-    { "type": "wokwi-servo", "id": "s5", "top": -300, "left": 80, "attrs": {} },
-    { "type": "wokwi-servo", "id": "s6", "top": -300, "left": 220, "attrs": {} },
-    { "type": "wokwi-servo", "id": "s7", "top": -300, "left": 360, "attrs": {} }
+    {
+      "type": "board-esp32-devkit-c-v4",
+      "id": "esp",
+      "top": 0,
+      "left": 0,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-servo",
+      "id": "s0",
+      "top": -180,
+      "left": -60,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-servo",
+      "id": "s1",
+      "top": -180,
+      "left": 80,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-servo",
+      "id": "s2",
+      "top": -180,
+      "left": 220,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-servo",
+      "id": "s3",
+      "top": -180,
+      "left": 360,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-servo",
+      "id": "s4",
+      "top": -300,
+      "left": -60,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-servo",
+      "id": "s5",
+      "top": -300,
+      "left": 80,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-servo",
+      "id": "s6",
+      "top": -300,
+      "left": 220,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-servo",
+      "id": "s7",
+      "top": -300,
+      "left": 360,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-led",
+      "id": "l0",
+      "top": 20,
+      "left": 330,
+      "attrs": {
+        "color": "red"
+      }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r0",
+      "top": 95,
+      "left": 315,
+      "rotate": 90,
+      "attrs": {
+        "value": "220"
+      }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "l1",
+      "top": 20,
+      "left": 400,
+      "attrs": {
+        "color": "red"
+      }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": 95,
+      "left": 385,
+      "rotate": 90,
+      "attrs": {
+        "value": "220"
+      }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "l2",
+      "top": 20,
+      "left": 470,
+      "attrs": {
+        "color": "red"
+      }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r2",
+      "top": 95,
+      "left": 455,
+      "rotate": 90,
+      "attrs": {
+        "value": "220"
+      }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "l3",
+      "top": 20,
+      "left": 540,
+      "attrs": {
+        "color": "red"
+      }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r3",
+      "top": 95,
+      "left": 525,
+      "rotate": 90,
+      "attrs": {
+        "value": "220"
+      }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "l4",
+      "top": 170,
+      "left": 330,
+      "attrs": {
+        "color": "red"
+      }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r4",
+      "top": 245,
+      "left": 315,
+      "rotate": 90,
+      "attrs": {
+        "value": "220"
+      }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "l5",
+      "top": 170,
+      "left": 400,
+      "attrs": {
+        "color": "red"
+      }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r5",
+      "top": 245,
+      "left": 385,
+      "rotate": 90,
+      "attrs": {
+        "value": "220"
+      }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "l6",
+      "top": 170,
+      "left": 470,
+      "attrs": {
+        "color": "red"
+      }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r6",
+      "top": 245,
+      "left": 455,
+      "rotate": 90,
+      "attrs": {
+        "value": "220"
+      }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "l7",
+      "top": 170,
+      "left": 540,
+      "attrs": {
+        "color": "red"
+      }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r7",
+      "top": 245,
+      "left": 525,
+      "rotate": 90,
+      "attrs": {
+        "value": "220"
+      }
+    },
+    {
+      "type": "wokwi-text",
+      "id": "t1",
+      "top": -330,
+      "left": -60,
+      "attrs": {
+        "text": "Motores 0-7 (SG90)"
+      }
+    },
+    {
+      "type": "wokwi-text",
+      "id": "t2",
+      "top": -10,
+      "left": 330,
+      "attrs": {
+        "text": "Luces 0-3"
+      }
+    },
+    {
+      "type": "wokwi-text",
+      "id": "t3",
+      "top": 140,
+      "left": 330,
+      "attrs": {
+        "text": "Luces 4-7"
+      }
+    }
   ],
   "connections": [
-    ["esp:13", "s0:PWM", "green", []], ["esp:5V", "s0:V+", "red", []], ["esp:GND.1", "s0:GND", "black", []],
-    ["esp:14", "s1:PWM", "green", []], ["esp:5V", "s1:V+", "red", []], ["esp:GND.1", "s1:GND", "black", []],
-    ["esp:16", "s2:PWM", "green", []], ["esp:5V", "s2:V+", "red", []], ["esp:GND.1", "s2:GND", "black", []],
-    ["esp:17", "s3:PWM", "green", []], ["esp:5V", "s3:V+", "red", []], ["esp:GND.1", "s3:GND", "black", []],
-    ["esp:18", "s4:PWM", "green", []], ["esp:5V", "s4:V+", "red", []], ["esp:GND.1", "s4:GND", "black", []],
-    ["esp:19", "s5:PWM", "green", []], ["esp:5V", "s5:V+", "red", []], ["esp:GND.1", "s5:GND", "black", []],
-    ["esp:23", "s6:PWM", "green", []], ["esp:5V", "s6:V+", "red", []], ["esp:GND.1", "s6:GND", "black", []],
-    ["esp:25", "s7:PWM", "green", []], ["esp:5V", "s7:V+", "red", []], ["esp:GND.1", "s7:GND", "black", []]
+    [
+      "esp:13",
+      "s0:PWM",
+      "green",
+      []
+    ],
+    [
+      "esp:5V",
+      "s0:V+",
+      "red",
+      []
+    ],
+    [
+      "esp:GND.1",
+      "s0:GND",
+      "black",
+      []
+    ],
+    [
+      "esp:14",
+      "s1:PWM",
+      "green",
+      []
+    ],
+    [
+      "esp:5V",
+      "s1:V+",
+      "red",
+      []
+    ],
+    [
+      "esp:GND.1",
+      "s1:GND",
+      "black",
+      []
+    ],
+    [
+      "esp:16",
+      "s2:PWM",
+      "green",
+      []
+    ],
+    [
+      "esp:5V",
+      "s2:V+",
+      "red",
+      []
+    ],
+    [
+      "esp:GND.1",
+      "s2:GND",
+      "black",
+      []
+    ],
+    [
+      "esp:17",
+      "s3:PWM",
+      "green",
+      []
+    ],
+    [
+      "esp:5V",
+      "s3:V+",
+      "red",
+      []
+    ],
+    [
+      "esp:GND.1",
+      "s3:GND",
+      "black",
+      []
+    ],
+    [
+      "esp:18",
+      "s4:PWM",
+      "green",
+      []
+    ],
+    [
+      "esp:5V",
+      "s4:V+",
+      "red",
+      []
+    ],
+    [
+      "esp:GND.1",
+      "s4:GND",
+      "black",
+      []
+    ],
+    [
+      "esp:19",
+      "s5:PWM",
+      "green",
+      []
+    ],
+    [
+      "esp:5V",
+      "s5:V+",
+      "red",
+      []
+    ],
+    [
+      "esp:GND.1",
+      "s5:GND",
+      "black",
+      []
+    ],
+    [
+      "esp:23",
+      "s6:PWM",
+      "green",
+      []
+    ],
+    [
+      "esp:5V",
+      "s6:V+",
+      "red",
+      []
+    ],
+    [
+      "esp:GND.1",
+      "s6:GND",
+      "black",
+      []
+    ],
+    [
+      "esp:25",
+      "s7:PWM",
+      "green",
+      []
+    ],
+    [
+      "esp:5V",
+      "s7:V+",
+      "red",
+      []
+    ],
+    [
+      "esp:GND.1",
+      "s7:GND",
+      "black",
+      []
+    ],
+    [
+      "esp:4",
+      "r0:2",
+      "orange",
+      []
+    ],
+    [
+      "r0:1",
+      "l0:A",
+      "orange",
+      []
+    ],
+    [
+      "l0:C",
+      "esp:GND.2",
+      "black",
+      []
+    ],
+    [
+      "esp:5",
+      "r1:2",
+      "orange",
+      []
+    ],
+    [
+      "r1:1",
+      "l1:A",
+      "orange",
+      []
+    ],
+    [
+      "l1:C",
+      "esp:GND.2",
+      "black",
+      []
+    ],
+    [
+      "esp:21",
+      "r2:2",
+      "orange",
+      []
+    ],
+    [
+      "r2:1",
+      "l2:A",
+      "orange",
+      []
+    ],
+    [
+      "l2:C",
+      "esp:GND.2",
+      "black",
+      []
+    ],
+    [
+      "esp:22",
+      "r3:2",
+      "orange",
+      []
+    ],
+    [
+      "r3:1",
+      "l3:A",
+      "orange",
+      []
+    ],
+    [
+      "l3:C",
+      "esp:GND.2",
+      "black",
+      []
+    ],
+    [
+      "esp:26",
+      "r4:2",
+      "orange",
+      []
+    ],
+    [
+      "r4:1",
+      "l4:A",
+      "orange",
+      []
+    ],
+    [
+      "l4:C",
+      "esp:GND.2",
+      "black",
+      []
+    ],
+    [
+      "esp:27",
+      "r5:2",
+      "orange",
+      []
+    ],
+    [
+      "r5:1",
+      "l5:A",
+      "orange",
+      []
+    ],
+    [
+      "l5:C",
+      "esp:GND.2",
+      "black",
+      []
+    ],
+    [
+      "esp:32",
+      "r6:2",
+      "orange",
+      []
+    ],
+    [
+      "r6:1",
+      "l6:A",
+      "orange",
+      []
+    ],
+    [
+      "l6:C",
+      "esp:GND.2",
+      "black",
+      []
+    ],
+    [
+      "esp:33",
+      "r7:2",
+      "orange",
+      []
+    ],
+    [
+      "r7:1",
+      "l7:A",
+      "orange",
+      []
+    ],
+    [
+      "l7:C",
+      "esp:GND.2",
+      "black",
+      []
+    ]
   ],
   "dependencies": {}
 }
